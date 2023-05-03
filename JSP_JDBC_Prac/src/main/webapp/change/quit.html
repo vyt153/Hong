@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css">
+<style>
+div#wrap>div {
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	margin: 8px;
+	width: 90%;
+	height: 40px;
+	font-size: 18px;
+	padding: 10px;
+}
+
+#wrap button {
+	margin: 8px;
+	width: 95%;
+	height: 60px;
+	font-size: 18px;
+	padding: 10px;
+}
+#quit{padding: 20px;border: 1px solid #000; width: 40%; height: 150px; text-align: center; 
+	border-radius: 6px; position: absolute; top:20%; left:50%; color:#fff; 
+	transform:translate(-50%,-50%); background-color: rgba(0, 0, 0, 0.7);
+	display: none;}
+h2{padding-top: 13px;}
+#quit>button{width: 80px;padding: 10px; border-radius: 6px;}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>회원 탈퇴</h1>
+		<div>
+			<form method="post">
+			<div>비밀번호 확인
+				<input type="text" name="upw" placeholder="비밀번호 입력" />
+				</div>
+			</form>
+				<button id="btnLogin">회원탈퇴</button>
+		</div>
+	</div>
+	<!-- div#wrap -->
+	<div id="quit">
+		<h2>정말 탈퇴하시겠습니까?</h2>
+		<button id="yes">예</button>
+		<button id="no">아니오</button>
+	</div>
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btnLogin").click(function() {
+			$("#quit").css({"display":"block"});
+			let msg = "정말 탈퇴하시겠습니까?";
+// 			let quit = confirm(msg);
+// 			if(quit){
+// 				$("form").attr('action', "changeProc.jsp?id=4");
+// 				$("form").submit();
+// 			}
+		})
+		$("#yes").click(function () {
+			$("form").attr('action', "changeProc.jsp?id=4");
+			$("form").submit();
+		})
+		$("#no").click(function () {
+			$("#quit").css({"display":"none"});
+		})
+	});
+</script>
+</html>

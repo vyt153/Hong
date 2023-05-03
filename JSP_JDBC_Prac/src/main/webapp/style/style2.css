@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+div#wrap {
+    width: 500px;
+    padding: 0 10px;
+    border: 2px solid rgba(51, 170, 255, 0.7);
+    border-radius: 4px;
+    margin: 20px auto;
+    user-select: none;
+}
+
+table {
+    width: 460px;
+    border-top: 3px solid #999;
+    border-collapse: collapse;
+    margin: 20px auto 10px;
+}
+
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+th {
+    width: 110px;
+    font-size: 14px;
+    text-align: right;
+    padding: 9px;
+    border-bottom: 1px solid #999;
+    background-color: #f7f7f7;
+}
+
+td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #999;
+}
+
+input {
+    width: 130px;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+input.email1 {
+    width: 90px;
+}
+input.email2 {
+    width: 140px;
+}
+
+/* button 스타일 시작 */
+button {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 9px;
+    border: none;
+    background-color: #868686;
+
+    cursor: pointer;
+
+    transform: translateY(0.8px);
+
+}
+
+button:hover {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* button 스타일 끝 */
+
+select {
+    font-size: 16px;
+    padding: 3px;
+    transform: translateY(0.9px);
+}
+
+tr:last-child td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: none;
+}
+
+tr:last-child td button {
+    width: 130px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+
+
+
+/* 필수 입력 처리 시작 */
+.req::before {
+    content: "* ";
+    color: rgb(202, 102, 30);
+}
+
+/* 필수 입력 처리 끝 */
