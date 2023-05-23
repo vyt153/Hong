@@ -1,8 +1,8 @@
-이름 : JSP_Prj_Cheers
+이름 : HBR
 
 ID : qhfka2854@naver.com
 
-URI = https://github.com/vyt153/JSP_Prj_Cheers.git
+URI = https://github.com/vyt153/Hong.git
 
 Token
-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
+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
