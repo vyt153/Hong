@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css">
+<link rel="stylesheet" href="../style/changeStyle.css" />
+</head>
+<body>
+	<div id="wrap">
+		<h1>비밀번호 변경</h1>
+		<div>
+			<form method="post">
+				<div>기존 비밀번호
+					<input type="text" name="upw" placeholder="비밀번호 입력" /> 
+				</div>
+				<div>변경할 비밀번호
+					<input type="text" id="pw1" name="newPw" placeholder="변경할 비밀번호 입력" />
+				</div>
+				<div>비밀번호 확인
+					<input type="text" id="pw2" name="newPw" placeholder="변경할 비밀번호 확인" />
+				</div>
+			</form>
+				<button id="btnLogin">비밀번호 변경</button>
+		</div>
+	</div>
+	<!-- div#wrap -->
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btnLogin").click(function() {
+			if($("#pw1").val()!=$("#pw2").val()){
+				alert("비밀번호가 다릅니다.");
+			} else{
+				$("form").attr('action', "changeProc.jsp?id=2");
+				$("form").submit();			
+			}
+		})
+	});
+</script>
+</html>
