@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url("/resource/style_Reset.css");
+
+textarea#comment {
+	display: block;
+	width: 600px; height: 100px;
+	margin: 10px; resize :none;
+	padding: 10px;
+}
+
+button#comBtn {
+	width: 100px; height: 100px;
+	cursor: pointer; font-size: 16px;
+}
+
+button#comBtn:hover {
+	color : #aaa; font-weight: bold;
+}
+
+#cModBtn, #cDelBtn {
+	border: none; background-color: #fff; cursor: pointer;
+}
+#cModBtn:hover, #cDelBtn:hover {
+	font-weight: bold;
+}
+#comTxt {
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

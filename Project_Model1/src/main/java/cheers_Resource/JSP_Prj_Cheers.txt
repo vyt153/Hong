@@ -1,0 +1,8 @@
+이름 : HBR
+
+ID : qhfka2854@naver.com
+
+URI = https://github.com/vyt153/Hong.git
+
+Token
+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

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css">
+<link rel="stylesheet" href="../style/changeStyle.css" />
+</head>
+<body>
+	<div id="wrap">
+		<h1>아이디 변경</h1>
+		<div>
+			<form method="post">
+				<div>변경할 아이디
+					<input type="text" name="newId" placeholder="변경할 아이디 입력" />
+				</div>
+			</form>
+				<button id="btnLogin">아이디 변경</button>
+		</div>
+	</div>
+	<!-- div#wrap -->
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btnLogin").click(function() {
+			$("form").attr('action', "changeProc.jsp?id=1");
+			$("form").submit();
+		})
+	});
+</script>
+</html>
