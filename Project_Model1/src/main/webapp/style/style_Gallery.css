@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@import url(/resource/style_Reset.css);
+
+/*/////////////////////////////////////////////////////////*/
+#container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#post {
+	border: 1px solid #000;
+}
+
+#post {
+	width: calc(33% - 20px);
+	height: 300px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+	padding: 8px;
+}
+
+#post > div + div {
+	font-size: 14px;
+	margin: 8px 0;
+}
+
+#imgBox {
+	width: 100%;
+	height: 65%;
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+#titleBox {
+	text-align: center;
+	font-weight: bold;
+	margin: 5px;
+}
+/* .dFlex{justify-content: space-between; margin: 5px; font-size: 13px;} */
+#uName {
+	text-align: center;
+	margin: 5px;
+}
+
+#listBtnArea {
+	display: flex;
+	justify-content: space-between;
+}
+
+#iconSample {
+	width: 13px;
+	height: 13px;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+	line-height: 13px;
+	border-radius: 50%;
+	background-color: #f44;
+	display: inline-block;
+	transform: translate(2px, -2px);
+}
+
+.pageNum {
+	cursor: pointer;
+}
+
+/* 페이징 영역 시작 */
+#listPagingArea {
+	padding-top: 20px;
+}
+
+#pagingTd {
+	text-align: center;
+}
+
+#pagingTd span {
+	width: 30px;
+	height: 30px;
+	font-weight: 12px;
+	text-align: center;
+	line-height: 30px;
+	margin: 10px 2px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#pagingTd span:hover {
+	color: #aaa;
+}
+
+#pagingTd span.nowPageNum {
+	font-size: 16px;
+	font-weight: bold;
+	background-color: rgba(136, 136, 136, 0.1);
+	cursor: default;
+}
+
+#pagingTd span.moveBlockArea {
+	width: 30px;
+	height: 30px;
+	font-size: 12px;
+	margin: 0 6px;
+	display: inline-block;
+}
+/* 페이징 영역 끝 */
+
+/* 리스트 페이지 버튼 공통 스타일 시작 */
+#listBtnArea  button {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 2px 6px;
+	cursor: pointer;
+}
+/* 리스트 페이지 버튼 공통 스타일 끝 */
+
+/* 글쓰기, 검색 영역 시작 */
+#listBtnArea {
+	padding-top: 20px;
+}
+
+#listBtnArea form {
+	justify-content: flex-end;
+}
+
+#listBtnArea div {
+	margin: 4px;
+}
+
+#listBtnArea input {
+	font-size: 16px;
+	padding: 2px 6px;
+}
+
+#listBtnArea select, #listBtnArea input {
+	font-size: 16px;
+	padding: 2px 6px;
+}
+/* 글쓰기, 검색 영역 끝 */
