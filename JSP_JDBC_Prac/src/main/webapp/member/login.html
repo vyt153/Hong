@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css">
+<style>
+div#wrap>div {
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	margin: 8px;
+	width: 90%;
+	height: 40px;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button {
+	margin: 8px;
+	width: 95%;
+	height: 60px;
+	font-size: 18px;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>로그인</h1>
+		<div>
+			<form>
+				<input type="text" id="uid" name="uid" placeholder="아이디 입력" /> <br /> 
+				<input type="text" id="upw" name="upw" placeholder="비밀번호 입력" /> <br />
+			</form>
+				<button id="btnLogin">로그인</button>
+				<br />
+				<button id="btnMain">메인페이지</button>
+		</div>
+	</div>
+	<!-- div#wrap -->
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btnMain").click(function() {
+			$("form").attr('action', "../index.jsp");
+			$("form").submit();
+		})
+		$("#btnLogin").click(function() {
+			$("form").attr('action', "loginProc.jsp");
+			$("form").submit();
+		})
+	});
+</script>
+</html>

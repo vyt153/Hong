@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css">
+<link rel="stylesheet" href="../style/changeStyle.css" />
+</head>
+<body>
+	<div id="wrap">
+		<h1>이메일 변경</h1>
+		<div>
+			<form method="post">
+				<div>기존 이메일
+					<input type="text" name="uemail" placeholder="기존 이메일 입력" /> 
+				</div>
+				<div>변경할 이메일
+					<input type="text" name="newEmail" placeholder="변경할 이메일 입력" />
+				</div>
+			</form>
+				<button id="btnLogin">이메일 변경</button>
+		</div>
+	</div>
+	<!-- div#wrap -->
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btnLogin").click(function() {
+			$("form").attr('action', "changeProc.jsp?id=3");
+			$("form").submit();
+		})
+	});
+</script>
+</html>
