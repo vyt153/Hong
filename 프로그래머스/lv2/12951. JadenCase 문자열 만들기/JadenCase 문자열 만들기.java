@@ -6,7 +6,7 @@ class Solution {
         
         for(int i=0;i<words.length; i++){
             
-            String word = words[i].trim();
+            String word = words[i];
             if(word.equals("")||word==""){
                 answer += " ";
                 continue;
