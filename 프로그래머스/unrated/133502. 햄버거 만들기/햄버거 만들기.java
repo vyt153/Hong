@@ -16,7 +16,6 @@ class Solution {
             } else if(hamburger.peek()==1&&wrapBurger==3){
                 hamburger.pop();hamburger.pop();
                 hamburger.pop();hamburger.pop();
-                System.out.println(1);
                 
                 answer++;
                 if(hamburger.isEmpty()){
@@ -25,17 +24,13 @@ class Solution {
                     int bread = hamburger.search(1);
                     int vegetable = hamburger.search(2);
 
-                    if(bread==1) { wrapBurger=1;}
-                    else if(bread+vegetable==3){ wrapBurger=2;}
-                    else{wrapBurger=0;}
+                    if(bread==1) wrapBurger=1;
+                    else if(bread+vegetable==3) wrapBurger=2;
+                    else wrapBurger=0;
                 }
             } else{
-                if(hamburger.peek()==1){
-                    wrapBurger = 1;
-                }else{
-                    wrapBurger = 0;    
-                }
-                
+                if(hamburger.peek()==1) wrapBurger = 1;
+                else wrapBurger = 0;   
             }
             i++;
         }
