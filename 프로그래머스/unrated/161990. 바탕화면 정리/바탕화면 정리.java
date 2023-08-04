@@ -12,7 +12,6 @@ class Solution {
 			if(!wallpaper[i].contains("#")) maxY-=1;
             else break;
 		}
-		System.out.println(minY);
         
         int minX = wallpaper[0].length();
         int maxX = 0;
