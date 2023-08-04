@@ -42,6 +42,7 @@ class Solution {
                 }
             }
         }
+        
         int[][] result = {type1,type2,type3,type4};
         for(int i=0; i<4;i++){
             if(result[i][0]>result[i][1]||result[i][0]==result[i][1]) {
