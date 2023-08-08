@@ -15,17 +15,10 @@ class Solution {
         Collections.sort(list, Collections.reverseOrder());
         
         for(Integer i : list){
-            if(i<=k){
-                k -= i;
-                answer++;
-            } else if(i>k&&k>0){
-                answer++;
-                break;
-            } else{
-                break;
-            }
+            k -= i;
+            answer++;
+            if(k<=0) break;
         }
-		System.out.println();
         return answer;
     }
 }
