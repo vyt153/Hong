@@ -1,0 +1,31 @@
+import java.util.*;
+class Solution {
+    public int solution(int k, int[] tangerine) {
+        int answer = 0;
+        
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i : tangerine) {
+            Integer key = i;
+			map.put(key, map.getOrDefault(key, 0) + 1);
+		}
+        
+        List<Integer> list = new ArrayList<>();
+        
+        for(Integer key : map.keySet()) list.add(map.get(key));
+        Collections.sort(list, Collections.reverseOrder());
+        
+        for(Integer i : list){
+            if(i<=k){
+                k -= i;
+                answer++;
+            } else if(i>k&&k>0){
+                answer++;
+                break;
+            } else{
+                break;
+            }
+        }
+		System.out.println();
+        return answer;
+    }
+}
