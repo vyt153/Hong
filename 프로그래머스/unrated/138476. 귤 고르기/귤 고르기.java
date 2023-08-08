@@ -8,13 +8,13 @@ class Solution {
 			map.put(key, map.getOrDefault(key, 0) + 1);
 		}
         
-        List<Integer> list = new ArrayList<>();
+        List<Integer> sortedCounts = new ArrayList<>();
         
-        for(Integer key : map.keySet()) list.add(map.get(key));
-        Collections.sort(list, Collections.reverseOrder());
+        for(Integer key : map.keySet()) sortedCounts.add(map.get(key));
+        Collections.sort(sortedCounts, Collections.reverseOrder());
         
-        for(Integer i : list){
-            k -= i;
+        for(Integer count : sortedCounts){
+            k -= count;
             answer++;
             if(k<=0) break;
         }
