@@ -8,9 +8,7 @@ class Solution {
             map.put(key, map.getOrDefault(key, 0) + 1);
         }
 
-        List<Integer> sortedCount = new ArrayList<>();
-
-        for(Integer key : map.keySet()) sortedCount.add(map.get(key));
+        List<Integer> sortedCount = new ArrayList<>(map.values());
         Collections.sort(sortedCount, Collections.reverseOrder());
 
         for(Integer count : sortedCount){
