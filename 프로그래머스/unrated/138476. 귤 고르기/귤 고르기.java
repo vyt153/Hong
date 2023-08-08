@@ -4,8 +4,7 @@ class Solution {
         int answer = 0;
         
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i : tangerine) {
-            Integer key = i;
+        for (int key : tangerine) {
 			map.put(key, map.getOrDefault(key, 0) + 1);
 		}
         
