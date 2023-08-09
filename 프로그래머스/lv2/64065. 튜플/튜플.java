@@ -7,7 +7,7 @@ class Solution {
         for(String str:arr)map.put(str, map.getOrDefault(str, 0)+1);
         
         int[] answer = new int[map.size()];
-        for(String key : map.keySet())answer[answer.length-map.get(key)] = Integer.parseInt(key);
+        for(String key:map.keySet()) answer[map.size()-map.get(key)] = Integer.parseInt(key);
         return answer;
     }
 }
