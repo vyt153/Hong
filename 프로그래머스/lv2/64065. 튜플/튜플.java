@@ -1,20 +1,13 @@
 import java.util.*;
 class Solution {
     public int[] solution(String s) {
-        
-        HashSet<String> set = new HashSet<>();
         String[] arr = s.replaceAll("[{}]", "").split(",");
         
-        for(String str : arr) set.add(str);
-        int[] answer = new int[set.size()];
+        Map<String, Integer> map = new HashMap<>();
+        for(String str:arr)map.put(str, map.getOrDefault(str, 0)+1);
         
-        for(String tuple : set){
-            int index = set.size();
-            for(String str : arr){
-                if(tuple.equals(str)) index--;
-            }
-            answer[index] = Integer.parseInt(tuple);
-        }   
+        int[] answer = new int[map.size()];
+        for(String key : map.keySet())answer[answer.length-map.get(key)] = Integer.parseInt(key);
         return answer;
     }
 }
