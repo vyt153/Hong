@@ -4,15 +4,15 @@ class Solution {
         int answer = 0;
         for(int i = 0; i<s.length(); i++){
             String str = s.substring(i, s.length())+s.substring(0, i);
-            String[] checkStr = str.split("");
-            Stack<String> stack = new Stack<>();
-            for(int j = 0; j<checkStr.length; j++){
-                if(stack.empty()) stack.push(checkStr[j]);
+            Stack<Character> stack = new Stack<>();
+            
+            for(int j = 0; j<str.length(); j++){
+                if(stack.empty()) stack.push(str.charAt(j));
                 else{
-                    if(checkStr[j].equals(")")&&stack.peek().equals("(")) stack.pop();
-                    else if(checkStr[j].equals("}")&&stack.peek().equals("{")) stack.pop();
-                    else if(checkStr[j].equals("]")&&stack.peek().equals("[")) stack.pop();
-                    else stack.push(checkStr[j]);
+                    if(str.charAt(j)==')'&&stack.peek()=='(') stack.pop();
+                    else if(str.charAt(j)=='}'&&stack.peek()=='{') stack.pop();
+                    else if(str.charAt(j)==']'&&stack.peek()=='[') stack.pop();
+                    else stack.push(str.charAt(j));
                 }
             }
             if(stack.empty()) answer++;
