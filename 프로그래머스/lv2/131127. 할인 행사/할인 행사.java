@@ -8,7 +8,14 @@ class Solution {
             
             for(int j=i; j<i+10; j++)map.put(discount[j], map.getOrDefault(discount[j], 0)+1);
             
-            answer += checkDay(map, number, want)? 1 : 0;
+            int check = 0;
+            
+            for(int k=0; k<number.length; k++){
+                if(map.get(want[k])!=null&&map.get(want[k]).equals(number[k])) check++;
+            }
+            
+            if(check==number.length) answer++;
+            //answer += checkDay(map, number, want)? 1 : 0;
         }
         return answer;
     }
